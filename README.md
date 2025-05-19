@@ -1,7 +1,7 @@
 
 # 🚀 End-to-End Machine Learning Pipeline: Diabetes Prediction with DVC & MLflow
 
-This project demonstrates how to build a **scalable, reproducible, and trackable ML pipeline** for binary classification using the **Pima Indians Diabetes Dataset**. The pipeline is orchestrated with **DVC** for data and model versioning, and **MLflow** for experiment tracking and model management.
+This project demonstrates how to build a **scalable, reproducible, and trackable ML pipeline** for binary classification using the **Pima Diabetes Dataset**. The pipeline is orchestrated with **DVC** for data and model versioning, and **MLflow** for experiment tracking and model management.
 
 ---
 
@@ -39,12 +39,12 @@ This project demonstrates how to build a **scalable, reproducible, and trackable
 ![Data Pipeline](https://github.com/ridabayi/End-to-End-Machine-Learning-Pipeline-Diabetes-Prediction-with-DVC-MLflow/blob/main/DataPipeline.png))
 ---
 
-## 📊 Dataset: Pima Indians Diabetes
+## 📊 Dataset: Pima Diabetes
 
 - **Source**: National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)  
 - **Target**: `Outcome` (1 = diabetic, 0 = non-diabetic)  
 - **Format**: CSV  
-- **Population**: Female Pima Indian patients, aged 21+  
+- **Population**: Female Pima patients, aged 21+  
 
 ### Features
 
