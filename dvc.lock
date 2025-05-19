@@ -9,28 +9,28 @@ stages:
       size: 23873
     - path: src/preprocess.py
       hash: md5
-      md5: 06317198a371c9765ebb34247d8873b4
-      size: 506
+      md5: 4057870eb418b93064f0b820fa018e04
+      size: 489
     params:
       params.yaml:
         preprocess.input: data/raw/diabetes.csv
-        preprocess.output: data/processed/diabetes.csv
+        preprocess.output: data/processed/diabetes_clean.csv
     outs:
-    - path: data/processed/diabetes.csv
+    - path: data/processed/diabetes_clean.csv
       hash: md5
       md5: bea5b9be0aee81bfecbe7100ed8b90da
       size: 23961
   train:
     cmd: python src/train.py
     deps:
-    - path: data/processed/diabetes.csv
+    - path: data/processed/diabetes_clean.csv
       hash: md5
       md5: bea5b9be0aee81bfecbe7100ed8b90da
       size: 23961
     - path: src/train.py
       hash: md5
-      md5: 4e1fb787ac94dda0acd9e17d27650635
-      size: 3509
+      md5: 2f28fe7209d2592a36a826a8aebc897a
+      size: 3493
     params:
       params.yaml:
         train.data: data/raw/diabetes.csv
@@ -41,20 +41,20 @@ stages:
     outs:
     - path: models/diabetes_model.pkl
       hash: md5
-      md5: 064fede53236d8b04b4aeac4d02407bd
-      size: 846609
+      md5: 500d92a110d5226c12822fa06ffb887b
+      size: 804369
   evaluate:
     cmd: python src/evaluate.py
     deps:
-    - path: data/raw/diabetes.csv
+    - path: data/processed/diabetes_clean.csv
       hash: md5
-      md5: f2906818eda8fcfc8f8416557ab1e6df
-      size: 23873
+      md5: bea5b9be0aee81bfecbe7100ed8b90da
+      size: 23961
     - path: models/diabetes_model.pkl
       hash: md5
-      md5: 064fede53236d8b04b4aeac4d02407bd
-      size: 846609
+      md5: 500d92a110d5226c12822fa06ffb887b
+      size: 804369
     - path: src/evaluate.py
       hash: md5
-      md5: ca98151dc05a4afcc9fb5b14b0a37584
-      size: 1088
+      md5: 4511621a3428e1364daa144fe5b30641
+      size: 1073

@@ -8,11 +8,11 @@ stages:
     - preprocess.input
     - preprocess.output
     outs:
-    - data/processed/diabetes.csv
+    - data/processed/diabetes_clean.csv
   train:
     cmd: python src/train.py
     deps:
-    - data/processed/diabetes.csv
+    - data/processed/diabetes_clean.csv
     - src/train.py
     params:
     - train.data
@@ -25,6 +25,6 @@ stages:
   evaluate:
     cmd: python src/evaluate.py
     deps:
-    - data/raw/diabetes.csv
+    - data/processed/diabetes_clean.csv
     - models/diabetes_model.pkl
     - src/evaluate.py

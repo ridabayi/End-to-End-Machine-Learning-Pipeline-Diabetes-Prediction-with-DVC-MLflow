@@ -1,6 +1,6 @@
 preprocess:
   input: data/raw/diabetes.csv
-  output: data/processed/diabetes.csv
+  output: data/processed/diabetes_clean.csv
 
 train:
   data: data/raw/diabetes.csv    
