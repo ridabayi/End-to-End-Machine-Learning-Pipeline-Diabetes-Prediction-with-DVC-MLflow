@@ -35,7 +35,8 @@ This project demonstrates how to build a **scalable, reproducible, and trackable
 ├── README.md                # Project documentation
 ├── .gitignore / .dvcignore  # Ignore rules
 ```
-
+## Data Pipeline
+![Data Pipeline](https://github.com/ridabayi/End-to-End-Machine-Learning-Pipeline-Diabetes-Prediction-with-DVC-MLflow/blob/main/DataPipeline.png))
 ---
 
 ## 📊 Dataset: Pima Indians Diabetes
